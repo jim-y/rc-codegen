@@ -20,6 +20,41 @@ I noticed in my team that the developers after setting up some ground rules with
 
 Usually, these kind of conventions are covered by a documentation or coding guidelines. This package takes this to the next level by providing code generation tools where the generated code follows those guidelines.
 
+# Example
+
+In a react project
+
+```shell
+npm i rc-codegen
+```
+
+This exposes a `rcgen` binary. To use it either run `npm exec rcgen`
+
+```shell
+~/Development/repos/rc-codegen-test (main ✗) npm exec rcgen
+✔ What do you want to generate? · provider
+✔ What kind of provider do you want to generate? · with-context
+✔ What's your provider's name? · ThemeProvider
+✔ What javascript flavor do you want use? · .tsx
+✔ What kind of state container? · useReducer
+✔ Outfile: src/providers/ThemeProvider.tsx (y/N) · true
+
+Loaded templates: node_modules/rc-codegen/_templates
+✔      exists: src/providers/ThemeProvider.tsx. Overwrite? (y/N):  (y/N) · true
+       added: src/providers/ThemeProvider.tsx
+```
+
+Or call from `node_modules` as `node_modules/.bin/rcgen`
+
+```shell
+~/Development/repos/rc-codegen-test (main ✗) node_modules/.bin/rcgen 
+? What do you want to generate? … 
+hook
+provider
+```
+
+Or create an npm script for it in package.json.
+
 # To add a new generator
 
 You should read [http://www.hygen.io/](http://www.hygen.io/) first to have a good idea about generating code with `hygen`
