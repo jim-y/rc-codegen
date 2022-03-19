@@ -1,6 +1,6 @@
 {
     "name": "rc-codegen",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "React code generation helpers",
     "bin": {
         "rcgen": "cli.js"
